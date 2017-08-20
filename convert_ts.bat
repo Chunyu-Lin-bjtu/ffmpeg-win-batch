@@ -1,0 +1,1 @@
+for %%a in ("*.TS") do ffmpeg -i "%%a" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 18 "%%~na.mp4"

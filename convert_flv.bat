@@ -1,0 +1,1 @@
+for %%a in ("*.FLV") do ffmpeg -i "%%a" -vcodec copy -acodec copy "%%~na.mp4"

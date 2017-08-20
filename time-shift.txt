@@ -1,0 +1,9 @@
+>>Case 1: Audio ahead of video:
+
+ffmpeg -i input.mp4 -itsoffset 00:00:00.5 -i input.mp4 -vcodec copy -acodec copy -map 0:1 -map 1:0 output.mp4
+
+ffmpeg -i input.mp4 -itsoffset 00:00:00.5 -i input.mp4 -vcodec copy -acodec copy -map 0:0 -map 1:1 output.mp4
+
+>>Case 2: Audio behind video:
+
+ffmpeg -i input.mp4 -itsoffset 00:00:00.5 -i input.mp4 -vcodec copy -acodec copy -map 1:0 -map 0:1 output.mp4
